@@ -13,6 +13,8 @@
                     <th scope="col">Content</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Image</th>
+                    <th scope="col">Date-1</th>
+                    <th scope="col">Date-2</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,9 +29,9 @@
                         <td>{{ $project->updated_at }}</td>
                         <td class="vert">
                             <a href="{{ route('admin.project.show', $project) }}" class="btn btn-secondary"><i
-                                    class="bi bi-eye"></i>SHOW</a>
+                                    class="bi bi-eye"></i>show</a>
                             <a href="{{ route('admin.project.edit', $project) }}" class="btn btn-primary"><i
-                                    class="bi bi-pen"></i></a>
+                                    class="bi bi-pen"></i>edit</a>
                             <form class="d-inline delete-form" action="{{ route('admin.project.destroy', $project) }}"
                                 method="POST" data-name="{{ $project->title }}">
                                 @csrf

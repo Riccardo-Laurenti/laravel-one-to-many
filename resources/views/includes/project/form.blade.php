@@ -1,6 +1,7 @@
 @if ($project->exists)
     {{-- Modifico un post --}}
-    <form action="{{ route('admin.project.update', $project) }}" method="POST" enctype="multipart/form-data" novalidate>
+    <form class="container" action="{{ route('admin.project.update', $project) }}" method="POST"
+        enctype="multipart/form-data" novalidate>
         @method('PUT')
     @else
         {{-- Aggiungo un post --}}
