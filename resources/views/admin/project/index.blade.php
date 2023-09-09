@@ -13,8 +13,10 @@
                     <th scope="col">Content</th>
                     <th scope="col">Slug</th>
                     <th scope="col">Image</th>
+                    <th scope="col">Type</th>
                     <th scope="col">Date-1</th>
                     <th scope="col">Date-2</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -25,8 +27,10 @@
                         <td>{{ $project->content }}</td>
                         <td>{{ $project->slug }}</td>
                         <td>{{ $project->image }}</td>
+                        <td>{{ $project->types }}</td>
                         <td>{{ $project->created_at }}</td>
                         <td>{{ $project->updated_at }}</td>
+
                         <td class="vert">
                             <a href="{{ route('admin.project.show', $project) }}" class="btn btn-secondary"><i
                                     class="bi bi-eye"></i>show</a>
