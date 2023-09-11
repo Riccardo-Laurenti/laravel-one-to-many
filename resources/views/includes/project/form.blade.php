@@ -41,6 +41,15 @@
         <img src="{{ $project->image ? asset('storage/' . $project->image) : 'https://marcolanci.it/utils/placeholder.jpg' }}"
             alt="preview" class="img-fluid" id="image-preview">
     </div>
+    <div class="col-6">
+        <select name="type_id" id="">
+            <option value="1">FrontEnd</option>
+            <option value="2">BackEnd</option>
+            <option value="3">FullStack</option>
+            <option value="4">UI/UX</option>
+            <option value="5">Design</option>
+        </select>
+    </div>
 </div>
 <hr>
 <div class="d-flex justify-content-end mt-4">

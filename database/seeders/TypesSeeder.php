@@ -3,12 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Type;
-use App\Models\Types;
 use Faker\Generator;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class TypeSeeder extends Seeder
+class TypesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,7 +17,7 @@ class TypeSeeder extends Seeder
         $labels = ['FrontEnd', 'BackEnd', 'FullStack', 'UI/UX', 'Design'];
 
         foreach ($labels as $label) {
-            $types = new Types();
+            $types = new Type();
             $types->label = $label;
             $types->color = $faker->hexColor();
             $types->save();

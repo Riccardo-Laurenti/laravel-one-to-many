@@ -27,7 +27,13 @@
                         <td>{{ $project->content }}</td>
                         <td>{{ $project->slug }}</td>
                         <td>{{ $project->image }}</td>
-                        <td>{{ $project->types }}</td>
+
+                        @if ($project->type)
+                            <td>{{ $project->type->label }}</td>
+                        @else
+                            <td>not type</td>
+                        @endif
+
                         <td>{{ $project->created_at }}</td>
                         <td>{{ $project->updated_at }}</td>
 
